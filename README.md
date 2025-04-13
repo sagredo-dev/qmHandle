@@ -1,5 +1,4 @@
-                              qmHandle 1.3.0
-                              ==============
+# qmHandle
 
 Copyright 1998-2003 Michele Beltrame
 Modified by Chan Chung Hang Christopher (June, 2007)
@@ -130,4 +129,5 @@ Michele Beltrame does not maintain qmhandle anymore. Please email cchan-freetown
 
 This project is a SourceForge.Net shared project. For more information visit:
 
-http://qmhandle.sourceforge.net/
+http://qmhandle.sourceforge.net/  
+https://notes.sagredo.eu/en/qmail-notes-185/qmhandle-20.html
