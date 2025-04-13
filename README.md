@@ -3,7 +3,7 @@
 Copyright 1998-2003 Michele Beltrame
 Modified by Chan Chung Hang Christopher (June, 2007)
 
-INTRO
+Intro
 -----
 
 This is a simple perl script that helps you to view and manage (within some
@@ -21,7 +21,7 @@ With this script you can:
   * Tell qmail to slot messages with recipients in a remote domain for earlier retry (at the cost of longer queue stay).
 
 
-CONFIGURATION
+Configuration
 -------------
 
 There are only a few variables to configure, and this has to be done depending
@@ -29,28 +29,28 @@ on your system and qmail installation. You can find the variables at the top of
 the Perl script qmHandle (there's a configuration section properly marked).
 The variables are:
 
-1) my ($queue) = '/var/qmail/queue/';
+1) `my ($queue) = '/var/qmail/queue/';`  
 This is the path of your qmail queue directory. It's located here on 99.9%
 of qmail installation. If yours seems not to be there, try using the "find"
 command to locate it.
 
-2) my ($stopqmail) = '/etc/init.d/qmail stop';
+2) `my ($stopqmail) = '/etc/init.d/qmail stop';`  
 This is the name of the script/command which stops qmail. The one you
 see works on Debian GNU/Linux, if you have other you need to change it.
 In the script configuration section you'll find some examples of
 common options, including the one using DJB's daemontools. If you
 don't have any script to stop qmail, you *must leave this string
-empty*:
+empty*:  
 	$stopqmail = '';
 
-3) my ($startqmail) = "/etc/init.d/qmail start";
+3) `my ($startqmail) = "/etc/init.d/qmail start";`  
 This is the name of the script/command which stops qmail. The one you
 see works on Debian GNU/Linux, if you have other you need to change it.
 In the script configuration section you'll find some examples of
 common options, including the one using DJB's daemontools and the
 standard qmail distribution.
 
-4) my ($pidcmd) = 'pidof qmail-send';
+4) `my ($pidcmd) = 'pidof qmail-send';`  
 This is the command used to obtain qmail process id. The default
 should work on most Unix systems, but if on yours doesn't you can
 change it.
@@ -60,34 +60,37 @@ if you need to use qmHandle to delete messages in the queue. The first
 one is however needed in any case.
 
 
-USAGE
+Usage
 -----
 
 Usage is fairly simple. Here goes the help screen:
 
 Available parameters are:
-  -a     : try to send all queued messages now (qmail must be running)
-  -l     : list message queues
-  -L     : list local message queue
-  -R     : list remote message queue
-  -s     : show some statistics
-  -mN    : display message number N
-  -dN    : delete message number N
+```
+  -a       : try to send all queued messages now (qmail must be running)
+  -l       : list message queues
+  -L       : list local message queue
+  -R       : list remote message queue
+  -s       : show some statistics
+  -mN      : display message number N
+  -dN      : delete message number N
   -fsender : delete message from sender
-  -f're'   : delete message from senders matching regular expression re
-  -Stext : delete all messages that have/contain text as Subject
+  -F're'   : delete message from senders matching regular expression re
+  -Stext   : delete all messages that have/contain text as Subject
   -h're'   : delete all messages with headers matching regular expression re (case insensitive)
   -b're'   : delete all messages with body matching regular expression re (case insensitive)
   -H're'   : delete all messages with headers matching regular expression re (case sensitive)
   -B're'   : delete all messages with body matching regular expression re (case sensitive)
   -t're'   : flag messages with recipients in regular expression 're' for earlier retry (note: this lengthens the time message can stay in queue)
-  -D     : delete all messages in the queue (local & remote)
-  -V     : print program version
-
+  -D       : delete all messages in the queue (local & remote)
+  -V       : print program version
+```
 Additional (optional) parameters are:
+```
   -c     : display colored output
   -N     : list message numbers only
            (to be used either with -l, -L or -R)
+```
 
 It's possible to specify multiple parameters for multiple actions, in any
 order.
@@ -116,7 +119,7 @@ files in which it's stored) and, between parentheses, the directory number
 where it's located and the queue he's in (L=local, R=remote).
 
 
-GPL SOFTWARE
+GPL software
 ------------
 
 This is open source software under the GPL (see 'GPL' file included in the
@@ -124,6 +127,6 @@ distribution). For more information on the license have a look at:
 
 http://www.gnu.org
 
-MORE INFO
+More info
 ---------
 More info here https://notes.sagredo.eu/en/qmail-notes-185/qmhandle-20.html
