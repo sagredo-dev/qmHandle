@@ -101,7 +101,7 @@ A typical output of the command:
 
 could be:
 
--------------------------------------------------
+```
 143874 (9, R)
   Return-path: m.beltrame@betamag.com
   From: Michele Beltrame <m.beltrame@betamag.com>
@@ -109,7 +109,7 @@ could be:
   Subject: Re: [beta-reg] Server news pubblico.
   Date: Fri, 10 Apr 1998 09:04:32 +0200
   Size: 1600 bytes
--------------------------------------------------
+```
 
 The first line shows the number the message has in queue (the name of the
 files in which it's stored) and, between parentheses, the directory number
@@ -124,10 +124,6 @@ distribution). For more information on the license have a look at:
 
 http://www.gnu.org
 
-***For any problem, just drop an e-mail to mb@italpro.net.***
-Michele Beltrame does not maintain qmhandle anymore. Please email cchan-freetown@users.sourceforge.net instead.
-
-This project is a SourceForge.Net shared project. For more information visit:
-
-http://qmhandle.sourceforge.net/  
-https://notes.sagredo.eu/en/qmail-notes-185/qmhandle-20.html
+MORE INFO
+---------
+More info here https://notes.sagredo.eu/en/qmail-notes-185/qmhandle-20.html
